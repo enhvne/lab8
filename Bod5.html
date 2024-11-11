@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab8.5</title>
+    </head>
+    <body>
+        <h2>Вэб сайтруу өглөө ороход гараас өгсөн тооны 2 зэрэгийг, орой ороход гараас өгсөн тооны язгуурыг ол.</h2>
+    </body>
+    <script>
+        function checkTime() {
+            var h = new Date().getHours();
+            if(h >= 3 && h < 12) return "morning";
+            else return "evening";
+        }
+
+        var n = window.prompt("Тоо оруул: ","0");
+        n = parseFloat(n);
+        if (n<0) {
+            alert("Зөвхөн эерэг тоо оруулна уу!");
+        }
+        else {
+            var t = checkTime();
+
+            if (t === "morning") {
+                var a = Math.pow(n, 2);
+                document.writeln("Өглөөний мэнд! Таны оруулсан тооны 2 зэрэг: " + a);
+            } 
+            else {
+                var a = Math.sqrt(n);
+                document.writeln("Оройн мэнд! Таны оруулсан тооны язгуур: " + a);
+            }
+        }
+        
+    </script>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab8.2</title>
+    </head>
+    <body>
+        <h2>Чоно 25 км/ц хурдтай, туулай 18 км/ц хурдтай. Гараас өгсөн зайтай байхад хэдэн минут хэдэн секундын дараа гэхэд гүйцэх вэ?</h2>
+    </body>
+    <script>
+        var s, n, k=0;
+        s = window.prompt("Хоорондох зайг оруул: /км/",0);
+        n = parseInt(s);
+        var i=0, j;
+        while(k!=1) {
+            for(j=1;j<=60&&k!=true;j++) {
+                if((i+j/60)*25>=((i+j/60)*18+n)) {
+                    k = 1;
+                }
+            }
+            i++;
+        }
+        document.writeln((i-1)+" hours "+(j-1)+" minuts");
+    </script>
+</html>

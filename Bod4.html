@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab8.4</title>
+    </head>
+    <body>
+        <h2>Array-д өгөгдсөн 5 тооны хамгийн бага ерөнхий хуваагдагчийг ол.</h2>
+    </body>
+    <script>
+        function gcd(a, b) {
+            while (b !== 0) {
+                let temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+        function lcm(a, b) {
+            return (a * b) / gcd(a, b);
+        }
+        function lcmOfFiveNumbers(a, b, c, d, e) {
+            return lcm(lcm(lcm(lcm(a, b), c), d), e);
+        }
+
+        var a, a1, a2, a3, a4, a5;
+        a = window.prompt("Тоо оруул [1]: ",0);
+        a1 = parseInt(a);
+        a = window.prompt("Тоо оруул [2]: ",0);
+        a2 = parseInt(a);
+        a = window.prompt("Тоо оруул [3]: ",0);
+        a3 = parseInt(a);
+        a = window.prompt("Тоо оруул [4]: ",0);
+        a4 = parseInt(a);
+        a = window.prompt("Тоо оруул [5]: ",0);
+        a5 = parseInt(a);
+
+        document.writeln("ХБЕХ : "+lcmOfFiveNumbers(a1,a2,a3,a4,a5));
+    </script>
+</html>
